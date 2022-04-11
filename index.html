@@ -8,7 +8,22 @@
 </head>
 <body>
     <script>
-        
-    </script>
+        function padString (string, number, symbol, isRight = true) {
+
+        const counter = number - string.length;
+
+        if(counter < 0) return string;
+
+        for (let i = 0; i < counter; i++) {
+
+            if(isRight) string += symbol;
+
+            if(!isRight) string = symbol + string;
+
+        }
+        return string
+        }
+        console.log(padString(string="Hello", number=9, symbol='!',isRight=false ));
+      </script>
 </body>
 </html>
